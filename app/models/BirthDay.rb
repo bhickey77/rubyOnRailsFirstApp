@@ -1,0 +1,4 @@
+class BirthDay < Date
+
+
+end
