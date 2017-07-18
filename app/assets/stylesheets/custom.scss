@@ -69,11 +69,13 @@ p {
   font-size: 1.7em;
   color: white;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   padding-top: 9px;
-  font-weight: bold;
+  padding-left: 0px;
+  font-weight: regular;
   &:hover {
-    color: white;
+    padding-left: 6px;
+    font-weight: lighter;
     text-decoration: none;
   }
 }
@@ -204,4 +206,16 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+
+/* Bootstrap customization */
+
+.navbar-default {
+  background-color: #314a68;
+}
+
+.btn {
+  background-color: #86a3c6;
+  text-color: black
 }
