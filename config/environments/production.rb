@@ -48,7 +48,7 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'peaceful-tor-47536.herokuapp.com'
+  host = 'billhickey.io'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
@@ -59,6 +59,8 @@ Rails.application.configure do
     :domain         => 'billhickey.io',
     :enable_starttls_auto => true
   }
+
+  config.action_controller.default_url_options = {:host => "billhickey.io"}
 
 
   # Prepend all log lines with the following tags.
