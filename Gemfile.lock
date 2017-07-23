@@ -42,6 +42,10 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (7.1.1.2)
       execjs
+    axlsx (2.0.0)
+      htmlentities (~> 4.3.1)
+      nokogiri (>= 1.4.1)
+      rubyzip (= 0.9.9)
     bcrypt (3.1.11)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
@@ -81,6 +85,7 @@ GEM
     guard-minitest (2.4.4)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    htmlentities (4.3.4)
     i18n (0.8.4)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -162,6 +167,7 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     ruby-progressbar (1.8.1)
+    rubyzip (0.9.9)
     sass (3.4.24)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -208,6 +214,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  axlsx (= 2.0.0)
   bcrypt (= 3.1.11)
   bootstrap-sass (= 3.3.7)
   bootstrap-will_paginate (= 1.0.0)
