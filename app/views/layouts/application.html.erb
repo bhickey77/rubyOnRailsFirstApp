@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= favicon_link_tag %>
-    <title><%= full_title(yield(:title)) %></title>
+      <%= favicon_link_tag %>
+      <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png" />
+      <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track': 'reload' %>
