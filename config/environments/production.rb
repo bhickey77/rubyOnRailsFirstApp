@@ -49,7 +49,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   host = 'billhickey.io'
-  config.action_mailer.default_url_options = { host: host, only_path: true  }
+  config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
@@ -60,7 +60,7 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
-  config.action_controller.default_url_options = {:host => "billhickey.io"}
+  config.action_controller.default_url_options = { host: host }
 
 
   # Prepend all log lines with the following tags.
@@ -101,3 +101,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
+  config.action_view.default_url_options = { host: host }
