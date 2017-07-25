@@ -61,9 +61,6 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
-  config.action_controller.default_url_options = { host: host }
-
-
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
