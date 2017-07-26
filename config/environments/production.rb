@@ -47,9 +47,9 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
-  config.action_mailer.raise_delivery_errors = true
+  config.action_masiler.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'billhickey.io'
+  host = 'www.billhickey.io'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
@@ -57,7 +57,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'billhickey.io',
+    :domain         => 'www.billhickey.io',
     :enable_starttls_auto => true
   }
 
