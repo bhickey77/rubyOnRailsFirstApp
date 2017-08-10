@@ -261,7 +261,14 @@ aside {
 
 span.picture {
   margin-top: 10px;
+ 
   input {
     border: 0;
+     color: #314a68;
   }
+}
+
+.image-upload {
+  display: none;
+   background-color: #86a3c6;
 }
