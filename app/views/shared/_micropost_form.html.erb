@@ -3,10 +3,15 @@
   <div class="field">
     <%= f.text_area :content, placeholder: "Blast off..." %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-  <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: "image-upload" %>
+  <%= f.submit "blast", class: "btn btn-primary" %>
+  <span class="fake-input-button-box">
+  <span class="btn btn-primary">
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: "image-upload" %>
+      <div class="fake-input-button-text">
+      upload image blast  
+      </div>
   </span>
+  </span>  
 <% end %>
 
 <script type="text/javascript">
