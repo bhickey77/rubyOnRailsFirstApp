@@ -4,14 +4,14 @@ class MicropostsController < ApplicationController
   
   def destroy
     @micropost.destroy
-    flash[:success] = "Word blast deleted"
+    flash[:success] = "blast deleted"
     redirect_to request.referrer || root_url
   end
   
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "Word blast created!"
+      flash[:success] = "blast created!"
       redirect_to root_url
     else
       @feed_items = []
