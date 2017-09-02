@@ -8,4 +8,13 @@ module ApplicationHelper
         page_title + " | " + base_title
     end  
   end
+  
+  def lat
+    request.location.latitude
+  end
+  
+  def lon
+    request.location.longitude
+  end
+  
 end

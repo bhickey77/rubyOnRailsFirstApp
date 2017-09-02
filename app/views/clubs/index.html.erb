@@ -1,0 +1,10 @@
+<% provide(:title, 'squash clubs') %>
+<h1>squash clubs in your area!</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @clubs %>
+</ul>
+
+<%= will_paginate %>

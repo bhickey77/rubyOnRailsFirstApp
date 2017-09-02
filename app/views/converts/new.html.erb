@@ -1,0 +1,14 @@
+<% provide(:title, "excel conversion") %>
+<h1>upload files and receive a converted export</h1>
+
+<%= form_for(@convert) do |f| %>
+  <span class="fake-input-button-box">
+  <span class="btn btn-primary">
+    <%= f.file_field :source_data, accept: 'application/vnd.ms-powerpoint', class: "image-upload" %>
+    <div class="fake-input-button-text">
+      upload excel source file  
+     </div>
+  </span>
+  </span> 
+  <%= f.submit "submit file", class: "btn btn-primary" %>
+<% end %>

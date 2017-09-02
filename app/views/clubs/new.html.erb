@@ -1,0 +1,31 @@
+<% provide(:title, 'register your squash club') %>
+<h1>register your club!</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@club) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :club_name %>
+      <%= f.text_field :club_name, class: 'form-control' %>
+
+     <div class="jt-address-autocomplete">
+		    <!-- This field is used to search the address on Google Maps -->
+		    <%= f.text_field :address, class: 'jt-address-search' %>
+
+	    	<!-- All fields are hidden because the javascript will set their value automatically -->
+		    <% for attr in JT::Rails::Address.fields %>
+			      <%= f.hidden_field "address_#{attr}", class: "jt-address-field-#{attr}" %>
+		    <% end %>
+	   </div>
+	   
+	   <%= f.submit "submit", class: "btn btn-primary" %>
+	    <!-- Optional, if this field is true, the address will be remove -->
+	    <!--%= f.check_box :address_destroy %>
+
+    <% end %>
+
+    <!-- Load Google Maps and call googleMapInitialize when it's done -->
+      <script async type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&callback=googleMapInitialize&key=AIzaSyC-bdFaeQeCiIsfy3JOkPDuaYG5o2XW0ZM"></script>
+
+  </div>
+</div>

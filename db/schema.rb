@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170815014104) do
+ActiveRecord::Schema.define(version: 20170831190829) do
+
+  create_table "clubs", force: :cascade do |t|
+    t.string "club_name"
+    t.string "address_formatted_address"
+    t.string "address_street_number"
+    t.string "address_street_name"
+    t.string "address_street"
+    t.string "address_city"
+    t.string "address_zip_code"
+    t.string "address_department"
+    t.string "address_department_code"
+    t.string "address_state"
+    t.string "address_state_code"
+    t.string "address_country"
+    t.string "address_country_code"
+    t.float  "address_lat"
+    t.float  "address_lng"
+    t.string "address"
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"

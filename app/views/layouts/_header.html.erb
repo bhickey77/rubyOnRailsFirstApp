@@ -6,7 +6,7 @@
         <li><%= link_to "home", root_path %></li>
         <% if logged_in? %>
           <li><%= link_to "users", users_path %></li>
-          <li class="dropdown">
+            <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               account <b class="caret"></b>
             </a>
@@ -17,6 +17,16 @@
               <li>
                 <%= link_to "log out", logout_path, method: :delete %>
               </li>
+            </ul>
+          </li>
+           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              experiments <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "register a squash club!", new_club_path %></li>
+              <li><%= link_to "squash clubs!", clubs_path %></li>
+              <li><%= link_to "cTool", convert_path %></li>
             </ul>
           </li>
         <% else %>

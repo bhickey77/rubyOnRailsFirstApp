@@ -15,3 +15,25 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree
+
+//= require jt_address
+
+// This function is call when Google Maps is loaded
+
+
+window.googleMapInitialize = function(){
+
+    // Simple usage
+    $('.jt-address-autocomplete').jt_address();
+    
+    // Advanced usage with google options
+    $('.jt-address-autocomplete').jt_address({
+        type: ['restaurant'],
+        componentRestrictions: { country: 'fr' }
+    });
+
+};
+
+$('.jt-address-autocomplete').on('jt:address:data_changed', function(event, data){
+	console.log(data);
+});

@@ -19,6 +19,11 @@ gem 'jbuilder',     '2.6.1'
 gem 'axlsx',        '2.0.0'
 gem 'tzinfo-data',  '1.2017.2'
 
+# Geocoding related gems
+gem 'geocoder'
+gem 'jt-rails-address'
+# gem 'gmaps4rails'
+
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri

@@ -1,0 +1,16 @@
+<%= provide(:title, @club.club_name) %>
+
+<div>
+  <%= @club.club_name %>
+</div>
+
+<div>
+  <%= @club.address %>
+</div>
+  
+<div>  
+  <% miles = Geocoder::Calculations.distance_between([@club.address_lat, @club.address_lng], [request.location.latitude, request.location.longitude]) %>
+  <%= miles.round(1).to_s + " miles away" %>
+</div>
+
+  <!--%= @club.distance -->
