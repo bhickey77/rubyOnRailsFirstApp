@@ -15,7 +15,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 section {
@@ -63,21 +63,44 @@ p {
 
 /* header */
 
-#logo {
+#img {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
   text-transform: lowercase;
   letter-spacing: 1px;
-  padding-top: 9px;
+  padding-top: 0px;
+  padding-bottom: 9px;
   padding-left: 0px;
   font-weight: bold;
+  position: absolute;
   &:hover {
     color: #97b0ce;
     text-decoration: none;
+    opacity: 0;
   }
 }
+
+
+
+.logo-text {
+  padding-left: 38px;
+  color: #ffffff !important;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  padding-top: 10px;
+  display: inline !important;
+  white-space: nowrap;
+  position: absolute;
+  font-color: #ffffff !important;
+  &:hover {
+    color: #F4E766 !important;
+    text-decoration: none;
+  }
+}
+
+
 
 /* footer */
 
@@ -249,8 +272,18 @@ input {
 /* Bootstrap customization */
 
 .navbar-default {
-  background-color: #314a68;
+  background-color: #282828;
+  height: 80px;
+  padding: 10px 10px; 
+  display:inline-block;
+  font-size: 1.2em;
+  padding-bottom: 20px;
 }
+
+.containter {
+  padding-top: 10px;
+}
+.nav ul{margin:0;}
 
 .btn {
   background-color: #86a3c6;

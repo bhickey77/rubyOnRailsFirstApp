@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831190829) do
+ActiveRecord::Schema.define(version: 20171124154110) do
 
   create_table "clubs", force: :cascade do |t|
     t.string "club_name"
@@ -29,6 +29,23 @@ ActiveRecord::Schema.define(version: 20170831190829) do
     t.float  "address_lat"
     t.float  "address_lng"
     t.string "address"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.string  "player_1"
+    t.string  "player_2"
+    t.boolean "p1_winner"
+    t.boolean "p2_winner"
+    t.integer "game_1_p1"
+    t.integer "game_1_p2"
+    t.integer "game_2_p1"
+    t.integer "game_2_p2"
+    t.integer "game_3_p1"
+    t.integer "game_3_p2"
+    t.integer "game_4_p1"
+    t.integer "game_4_p2"
+    t.integer "game_5_p1"
+    t.integer "game_5_p2"
   end
 
   create_table "microposts", force: :cascade do |t|

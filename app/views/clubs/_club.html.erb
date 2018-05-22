@@ -1,5 +1,12 @@
 <li>
   <%= link_to club.club_name, club %>
   <div><%= club.address %></div>    
-  
+  <div>  
+    <% miles = Geocoder::Calculations.distance_between([club.address_lat, club.address_lng], [request.location.latitude, request.location.longitude]) %>
+    <% if !miles.nan? %>
+      <%= miles.round(1).to_s + " miles away" %>
+    <% end %>
+  </div>
+  <%= link_to "delete", club, method: :delete, 
+                              data: { confirm: "you sure?" } %>
 </li>

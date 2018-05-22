@@ -1,6 +1,19 @@
 <header class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <%= link_to "blast", root_path, id: "logo" %>
+    <!--<img src="mn_squash_logo_v2_2.png">-->
+    <%= link_to root_path do
+      image_tag("mn_squash_2.png", size:"70", alt:"Minnesota Squash Logo", id: "img")
+    end %>
+    <%= link_to root_path do
+      image_tag("mn_squash_1.png", size:"70", alt:"Minnesota Squash Logo", id: "img")
+    end %>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <div class="logo-text">
+      <%= link_to "mn squash", root_path, class: 'logo-text' %>
+    </div>
+  
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "home", root_path %></li>
@@ -27,6 +40,8 @@
               <li><%= link_to "register a squash club!", new_club_path %></li>
               <li><%= link_to "squash clubs!", clubs_path %></li>
               <li><%= link_to "cTool", convert_path %></li>
+              <li><%= link_to "record match results", new_match_path %></li>
+              
             </ul>
           </li>
         <% else %>

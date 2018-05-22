@@ -1,0 +1,44 @@
+<h1>new match</h1>
+
+<%= form_for(@match) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <%= f.label :player_1 %>
+  <%= f.text_field :player_1, class: 'form-control' %>
+  <%= f.label :player_2 %>
+  <%= f.text_field :player_2, class: 'form-control' %>
+  
+  <%= f.label :player_1 %>
+  <%= f.check_box :p1_winner, {}, "true", "false" %>
+  <%= f.label :player_2 %>
+  <%= f.check_box :p2_winner, {}, "true", "false" %>
+  
+  <%= f.label :game_1_player_1 %>
+  <%= f.text_field :game_1_p1, class: 'form-control' %>
+  <%= f.label :game_1_player_2 %>
+  <%= f.text_field :game_1_p2, class: 'form-control' %>
+  
+  <%= f.label :game_2_player_2 %>
+  <%= f.text_field :game_2_p1, class: 'form-control' %>
+  <%= f.label :game_2_player_2 %>
+  <%= f.text_field :game_2_p2, class: 'form-control' %>
+  
+  <%= f.label :game_3_player_1 %>
+  <%= f.text_field :game_3_p1, class: 'form-control' %>
+  <%= f.label :game_3_player_2 %>
+  <%= f.text_field :game_3_p2, class: 'form-control' %>
+  
+  <%= f.label :game_4_player_1 %>
+  <%= f.text_field :game_4_p1, class: 'form-control' %>
+  <%= f.label :game_4_player_2 %>
+  <%= f.text_field :game_4_p2, class: 'form-control' %>
+  
+  <%= f.label :game_5_player_1 %>
+  <%= f.text_field :game_5_p1, class: 'form-control' %>
+  <%= f.label :game_5_player_2 %>
+  <%= f.text_field :game_5_p2, class: 'form-control' %>
+
+  <%= f.submit "submit", class: "btn btn-primary" %>
+<% end %>
+
+
+<%= link_to 'Back', matches_path %>
