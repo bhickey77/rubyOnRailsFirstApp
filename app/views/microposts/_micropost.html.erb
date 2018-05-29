@@ -9,7 +9,7 @@
     posted <%= time_ago_in_words(micropost.created_at) %> ago.
     <% if current_user?(micropost.user) %>
       <%= link_to "delete", micropost, method: :delete,
-                                       data: { confirm: "you sure?" } %>
+                                       data: { confirm: "are you sure you want to delete this blast?" } %>
     <% end %>
   </span>
 </li>

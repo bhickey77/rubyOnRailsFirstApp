@@ -31,23 +31,6 @@ ActiveRecord::Schema.define(version: 20171124154110) do
     t.string "address"
   end
 
-  create_table "matches", force: :cascade do |t|
-    t.string  "player_1"
-    t.string  "player_2"
-    t.boolean "p1_winner"
-    t.boolean "p2_winner"
-    t.integer "game_1_p1"
-    t.integer "game_1_p2"
-    t.integer "game_2_p1"
-    t.integer "game_2_p2"
-    t.integer "game_3_p1"
-    t.integer "game_3_p2"
-    t.integer "game_4_p1"
-    t.integer "game_4_p2"
-    t.integer "game_5_p1"
-    t.integer "game_5_p2"
-  end
-
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
     t.integer  "user_id"
