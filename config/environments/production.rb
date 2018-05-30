@@ -57,7 +57,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'www.billhickey.io',
+    :domain         => 'www.rails-practice-app-blast.herokuapp.com',
     :enable_starttls_auto => true
   }
 
